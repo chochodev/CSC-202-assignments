@@ -1,32 +1,33 @@
 <?php
 
-echo("---- SCORE GRADER IN PHP TERMINAL ----\n");
+echo("---- SALARY GRADER IN PHP TERMINAL ----\n");
+echo("Salary grades = [\nA = 15,000\nB = 12,000\nC = 10,000\nD = 9,000\n]");
 while (true) {
-    echo("Enter your score between 0 to 100: ");
-    $score = intval(trim(fgets(STDIN)));
+    echo("Enter your salary grade: ");
+    $salary = trim(fgets(STDIN));
 
-    if ($score > 100 || $score < 0) {
-        echo("Score out of range");
-        break;
-    }
-    else {
+    if (in_array($salary, ['A','B','C','D'])) {
         switch (true) {
-            case $score >= 70:
+            case $salary >= 70:
                 echo("GRADE: A\n");
                 break;
-            case $score >= 60:
+            case $salary >= 60:
                 echo("GRADE: B\n");
                 break;
-            case $score >= 50:
+            case $salary >= 50:
                 echo("GRADE: C\n");
                 break;
-            case $score >= 45:
+            case $salary >= 45:
                 echo("GRADE: D\n");
                 break;
             default:
                 echo("GRADE: F\n");
                 break;
         }
+    }
+    else {
+        echo("salary grade not included\nTerminating...");
+        break;
     }
     
 }
