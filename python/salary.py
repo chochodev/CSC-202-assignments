@@ -2,7 +2,7 @@ print("---- SALARY GRADER IN PYTHON TERMINAL ----\n")
 print("Salary grades = [\nA = 15,000\nB = 12,000\nC = 10,000\nD = 9,000\n]\n")
 
 while True:
-    salary = str(input("Enter your salary grade: "))
+    salary = str(input("Enter your salary grade: ")).upper()
 
     if (salary in ['A','B','C','D']):
         if (salary == 'A'):
