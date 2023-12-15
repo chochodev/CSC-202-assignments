@@ -1,5 +1,6 @@
 # AVERAGE NUMBER CALCULATOR
 
+print("\n## AVERAGE NUMBER CALCULATOR")
 def get_validate_number(prompt):
     input_number = input(prompt)
     if not (input_number.isnumeric()):
