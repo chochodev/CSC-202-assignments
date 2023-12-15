@@ -8,7 +8,6 @@ function get_validate_number($prompt) {
         echo "\n## Error: Enter a valid number\n";
         exit();
     }
-
     return floatval($input);
 }
 
@@ -16,5 +15,6 @@ $num1 = get_validate_number("Enter first number: ");
 $num2 = get_validate_number("Enter second number: ");
 $num3 = get_validate_number("Enter third number: ");
 
-echo "Average is " . strval(($num1+$num2+$num3)/3);
+$average = round(($num1+$num2+$num3)/3, 2);
+echo "Average is " . strval($average);
 ?>
