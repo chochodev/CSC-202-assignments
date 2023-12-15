@@ -1,14 +1,20 @@
 <?php
 # AVERAGE NUMBER CALCULATOR
-function numberValidator($number) {
-    if ($number.is_numeric) {
-        return;
-    } else {
-        echo ("Error: Enter a valid number");
+function get_validate_number($prompt) {
+    echo $prompt;
+    $input = trim(fgets(STDIN));
+
+    if (!is_numeric($input)) {
+        echo "\n## Error: Enter a valid number\n";
+        exit();
     }
+
+    return floatval($input);
 }
-echo("Enter first number: ");
-$num1 = intval(trim(fgets(STDIN)));
-numberValidator($num1);
-echo($num1);
+
+$num1 = get_validate_number("Enter first number: ");
+$num2 = get_validate_number("Enter second number: ");
+$num3 = get_validate_number("Enter third number: ");
+
+echo "Average is " . strval(($num1+$num2+$num3)/3);
 ?>
